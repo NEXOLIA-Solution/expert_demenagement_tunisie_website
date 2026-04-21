@@ -74,7 +74,8 @@ export function ReviewFormSection({ onAddReview, isModal = false }: { onAddRevie
     };
 
     try {
-      const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:2000';
+     
+      const baseUrl = process.env.NEXT_PUBLIC_API_BASE;
       await axios.post(`${baseUrl}/review/api/register`, payload);
       setSubmitted(true);
       onAddReview?.(payload); // pour notifier le parent

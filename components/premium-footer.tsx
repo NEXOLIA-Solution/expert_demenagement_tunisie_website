@@ -333,7 +333,7 @@ export function PremiumFooter() {
         {/* Footer Bottom */}
         <section className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/60 text-sm text-center md:text-left">
-            © 2024 Déménagement Premium. Tous droits réservés.
+            © 2024 Nexolia Consulting. Tous droits réservés.
           </p>
           <nav className="flex gap-6 text-sm text-white/60" aria-label="Liens légaux">
             <Link href="/politique-confidentialite" className="hover:text-white transition-colors">Politique de confidentialité</Link>
