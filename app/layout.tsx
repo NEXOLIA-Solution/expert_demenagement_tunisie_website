@@ -3,20 +3,68 @@ import RootLayoutClient from "./RootLayoutClient"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Service de Déménagement Professionnel | Votre Expert en Déménagement",
+  metadataBase: new URL("https://expert-demenagement-tunisie.com"),
+
+  title: {
+    default: "Déménagement Tunisie | Expert Déménagement Professionnel",
+    template: "%s | Expert Déménagement Tunisie",
+  },
+
   description:
-    "Service de déménagement professionnel, fiable et abordable. Déménagement résidentiel et commercial avec une équipe expérimentée.",
-  generator: "v0.app",
-  icons: {
-    icon: [
-      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
-      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
-      { url: "/icon.svg", type: "image/svg+xml" },
+    "Expert en déménagement en Tunisie 🇹🇳. Service rapide, sécurisé et économique pour particuliers et entreprises. Devis gratuit.",
+
+  keywords: [
+    "déménagement Tunisie",
+    "déménageur Tunisie",
+    "transport meubles Tunisie",
+    "déménagement pas cher",
+    "société déménagement Tunisie",
+  ],
+
+  authors: [{ name: "Expert Déménagement Tunisie" }],
+
+  openGraph: {
+    title: "Déménagement Tunisie | Service Professionnel",
+    description:
+      "Entreprise spécialisée en déménagement résidentiel et commercial partout en Tunisie.",
+    url: "https://expert-demenagement-tunisie.com",
+    siteName: "Expert Déménagement Tunisie",
+    images: [
+      {
+        url: "https://expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Service de déménagement en Tunisie",
+      },
     ],
-    apple: "/apple-icon.png",
+    locale: "fr_FR",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Déménagement Tunisie",
+    description: "Service professionnel de déménagement en Tunisie",
+    images: [
+      "https://expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
+    ],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return <RootLayoutClient>{children}</RootLayoutClient>
 }
