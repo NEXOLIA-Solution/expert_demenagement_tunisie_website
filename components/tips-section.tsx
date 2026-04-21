@@ -39,7 +39,8 @@ export function TipsSection() {
   useEffect(() => {
     const fetchCompanyData = async () => {
       try {
-        const response = await fetch('http://localhost:2000/company/api')
+         const baseUrl = process.env.NEXT_PUBLIC_API_BASE
+        const response = await fetch(`${baseUrl}/company/api`)
         if (!response.ok) throw new Error('Erreur lors du chargement des données')
         const data = await response.json()
         setCompanyData(data[0]) // Prendre le premier élément du tableau

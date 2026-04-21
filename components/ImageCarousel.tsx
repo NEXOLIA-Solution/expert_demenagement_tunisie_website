@@ -35,7 +35,8 @@ export default function HeroImageCarousel() {
 
   // récupération API
   useEffect(() => {
-    axios.get("http://localhost:2000/company/api")
+     const baseUrl = process.env.NEXT_PUBLIC_API_BASE
+    axios.get(`${baseUrl}/company/api`)
       .then(res => {
         if (res.data && res.data.length > 0) {
           setCompany(res.data[0])

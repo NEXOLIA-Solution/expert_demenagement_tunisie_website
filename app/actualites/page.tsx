@@ -28,7 +28,7 @@ interface NewsItem {
   updatedAt?: string
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:2000"
+const API_URL = process.env.NEXT_PUBLIC_API_BASE
 
 export default function NewsPage() {
   const [news, setNews] = useState<NewsItem[]>([])

@@ -26,7 +26,7 @@ export const OffersSection = () => {
     setError('')
 
     try {
-      const API_URL = process.env.NEXT_PUBLIC_API_BASE || ''
+      const API_URL = process.env.NEXT_PUBLIC_API_BASE
       await axios.post(`${API_URL}/email-list/api/register`, { email })
       setSuccess('Merci ! Votre email a bien été enregistré.')
       setEmail('')

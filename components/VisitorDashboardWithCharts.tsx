@@ -62,7 +62,9 @@ export default function VisitorDashboardWithCharts() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    axios.get("http://localhost:2000/visitorAnalytics/api/visitors")
+     const baseUrl = process.env.NEXT_PUBLIC_API_BASE
+       
+    axios.get(`${baseUrl}/visitorAnalytics/api/visitors`)
       .then(res => setData(res.data))
       .catch(err => console.error(err))
       .finally(() => setLoading(false))

@@ -103,7 +103,8 @@ export function QuoteForm({ onSuccess, onError, className = '' }: QuoteFormProps
     const fetchContactInfo = async () => {
       try {
         setLoadingContact(true);
-        const response = await axios.get('http://localhost:2000/company/api');
+         const baseUrl = process.env.NEXT_PUBLIC_API_BASE
+        const response = await axios.get(`${baseUrl}/company/api`);
         if (response.data && response.data.length > 0) {
           setContactInfo(response.data[0]);
         } else {

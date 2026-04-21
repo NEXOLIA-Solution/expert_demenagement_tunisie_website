@@ -46,7 +46,7 @@ export default function GallerySection() {
     const fetchImages = async () => {
       try {
         setLoading(true)
-        const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:2000"
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE
         const res = await fetch(`${baseUrl}/gallery/api`)
 
         if (!res.ok) {
