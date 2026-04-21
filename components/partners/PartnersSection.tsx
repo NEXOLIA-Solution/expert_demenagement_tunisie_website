@@ -102,7 +102,9 @@ export function PartnersSection() {
     const fetchPartners = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:2000/partner/api/all");
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE
+        const response = await axios.get(`${baseUrl}/partner/api/all`);
+        
         setPartners(response.data);
         setError(null);
       } catch (err) {

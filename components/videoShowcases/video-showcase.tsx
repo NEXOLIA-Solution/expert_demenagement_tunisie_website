@@ -41,7 +41,7 @@ export default function VideoShowcase() {
       try {
         setLoading(true)
         // Utiliser une variable d'environnement pour l'URL de base
-        const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:2000'
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE
         const { data } = await axios.get(`${baseUrl}/video/api/all`)
         setVideos(data)
       } catch (err) {

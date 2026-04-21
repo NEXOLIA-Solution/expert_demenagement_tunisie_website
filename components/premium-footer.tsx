@@ -25,7 +25,11 @@ export function PremiumFooter() {
   const [errorCompany, setErrorCompany] = useState<string | null>(null)
 
   useEffect(() => {
-    axios.get('http://localhost:2000/company/api')
+
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE
+
+
+    axios.get(`${baseUrl}/company/api`)
       .then(response => {
         if (response.data && response.data.length > 0) setCompany(response.data[0])
         setLoadingCompany(false)
@@ -230,7 +234,7 @@ export function PremiumFooter() {
           </article>
 
 
-           {/* Logo camionnette animé (inchangé) */}
+          {/* Logo camionnette animé (inchangé) */}
           <div className="flex justify-center items-center w-full md:w-auto">
             <div className="relative w-56 h-36 rounded-xl backdrop-blur-sm flex items-center justify-center overflow-hidden">
               <svg
