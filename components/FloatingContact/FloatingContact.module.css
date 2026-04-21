@@ -1,0 +1,193 @@
+/* Container global centré verticalement */
+.floatingContactContainer {
+  position: fixed;
+  top: 58%;
+  right: 20px; /* attention à bien mettre px */
+  transform: translateY(-50%); /* centre verticalement */
+  display: flex;
+  flex-direction: column; /* icone au-dessus, panneau en dessous */
+  align-items: flex-end;
+  z-index: 5000;
+  gap: 12px;
+}
+
+/* Animation flottante douce */
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-5px) scale(1.05); }
+}
+
+/* Icône téléphone visible avec style pro */
+.phoneIcon {
+  background: #a10129a1;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  border:1px solid white;
+  /* Ombre réaliste et douce */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.712);
+
+  /* Animation subtile flottante */
+  animation: float 3s ease-in-out infinite;
+
+  /* Transition smooth pour hover */
+  transition: all 0.4s ease;
+}
+
+/* Survol icône téléphone */
+.phoneIcon:hover {
+  background: #a10128;
+  transform: translateY(-5px) scale(1.1); /* léger soulèvement et zoom */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35); /* ombre plus prononcée */
+}
+
+/* Panneau complet - caché par défaut */
+.contactPanel {
+  background: #ffffff;
+  border-radius: 12px 0 0 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding: 16px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  /* commence hors écran */
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Affiche le panneau quand on survole l'icône */
+.phoneIcon:hover + .contactPanel,
+.contactPanel:hover {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Titre du panneau */
+.contactTitle {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Liste de contact */
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Élément de la liste */
+.contactList li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover sur chaque contact */
+.contactList li:hover {
+  color: #2563eb;
+  transform: translateX(3px); /* petit déplacement subtil */
+}
+
+/* Icônes à l'intérieur de la liste */
+.icon {
+  width: 20px;
+  height: 20px;
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+
+
+
+
+/* Conteneur pour les boutons rapides */
+.quickControls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Style des boutons icône */
+.controlIcon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #2563eb;
+}
+
+.controlIcon:hover {
+  background: #e0e7ff;
+  transform: translateY(-2px);
+}
+
+/* Label langue */
+.langLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+
+
+
+.contactPanel {
+  background: #ffffff;
+  border-radius: 12px 0 0 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding: 16px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  /* 🔥 IMPORTANT */
+  transform: translateX(120%);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.phoneIcon:hover + .contactPanel,
+.contactPanel:hover {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.floatingContactContainer {
+  pointer-events: none;
+}
+
+.phoneIcon,
+.contactPanel {
+  pointer-events: auto;
+}
