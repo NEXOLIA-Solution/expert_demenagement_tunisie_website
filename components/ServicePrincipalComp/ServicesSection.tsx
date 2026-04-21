@@ -259,7 +259,7 @@ export default function ServicesSection() {
     const fetchServices = async () => {
       try {
         setLoading(true);
-        const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:2000';
+         const baseUrl = process.env.NEXT_PUBLIC_API_BASE
         const { data } = await axios.get(`${baseUrl}/service/api/all`);
         // Transformer les données API en format attendu
         const transformed = data.map(transformService);

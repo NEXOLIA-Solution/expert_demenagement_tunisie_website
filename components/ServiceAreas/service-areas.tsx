@@ -19,7 +19,8 @@ export function ServiceAreas() {
   const countries = ['France', 'Belgique', 'Suisse', 'Allemagne', 'Pays-Bas', 'Autres pays UE']
 
   useEffect(() => {
-    axios.get('http://localhost:2000/company/api')
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE
+    axios.get(`${baseUrl}/company/api`)
       .then(response => {
         if (response.data && response.data.length > 0) setCompany(response.data[0])
         setLoading(false)
