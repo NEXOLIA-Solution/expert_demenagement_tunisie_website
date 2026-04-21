@@ -26,7 +26,7 @@ export default function FAQSection() {
     const fetchFAQs = async () => {
       try {
         setLoading(true)
-        const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:2000'
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE
         const { data } = await axios.get(`${baseUrl}/faq/api/all`)
         setFaqItems(data)
         if (data.length > 0) setExpandedId(data[0]._id)
