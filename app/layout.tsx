@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   description:
     "Expert en déménagement en Tunisie 🇹🇳. Service rapide, sécurisé et économique pour particuliers et entreprises. Devis gratuit.",
   icons: {
-    icon: "/logoSite/logo1-removebg-preview.png", // ou ton logo
-    shortcut: "/logoSite/logo1-removebg-preview.png",
-    apple: "/logoSite/logo1-removebg-preview.png",
+    icon: "https://expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png", // ou ton logo
+    shortcut: "https://expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
+    apple: "https://expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
   },
   keywords: [
     "déménagement Tunisie",
