@@ -38,7 +38,7 @@ const Testimonials = () => {
       try {
         setLoading(true);
        
-        const baseUrl = process.env.NEXT_PUBLIC_API_BASE;
+        const baseUrl = "https://expert-demenagement-tunisie-backend.onrender.com"
         const { data } = await axios.get(`${baseUrl}/review/api/validated`);
         setReviews(data);
       } catch (err) {
