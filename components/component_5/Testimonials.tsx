@@ -37,7 +37,8 @@ const Testimonials = () => {
     const fetchReviews = async () => {
       try {
         setLoading(true);
-        const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:2000';
+       
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE;
         const { data } = await axios.get(`${baseUrl}/review/api/validated`);
         setReviews(data);
       } catch (err) {
