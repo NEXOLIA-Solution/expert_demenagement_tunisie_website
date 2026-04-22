@@ -24,7 +24,7 @@ export default function RootLayoutClient({ children }: { children: React.ReactNo
         <body className="font-sans antialiased">
           <PageLoader visible={loading} />
           <FloatingContact />
-
+                      
      
           {children}
 
