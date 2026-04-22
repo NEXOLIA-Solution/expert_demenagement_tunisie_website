@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Mail, Phone, FileText, Facebook, Instagram, Youtube, MapPin, Globe, Loader2 } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
-import logoAla from "@/public/logoAla.png"
+import logoAla from "@/public/logoSite/logo1-removebg-preview.png"
 import Link from "next/link"
 
 interface SocialLink {
