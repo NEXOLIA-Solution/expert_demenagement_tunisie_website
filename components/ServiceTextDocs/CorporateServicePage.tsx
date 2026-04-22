@@ -328,7 +328,7 @@ ${formData.companyName ? formData.companyName : ''}`;
       };
 
       await axios.post(
-        `http://localhost:2000/quote/api`,
+        `${process.env.NEXT_PUBLIC_API_BASE}/quote/api`,
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
