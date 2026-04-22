@@ -416,16 +416,7 @@ ${formData.firstName} ${formData.lastName}`;
               className="mb-12 rounded-2xl overflow-hidden shadow-lg border border-border bg-card"
             >
               <div className="relative w-full aspect-video bg-black">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={`https://www.youtube.com/embed/${youtubeId}`}
-                  title="Déménagement professionnel"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                />
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FWmZUg8InB0?si=AdFhHtCnJP5PGak3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </motion.div>
 

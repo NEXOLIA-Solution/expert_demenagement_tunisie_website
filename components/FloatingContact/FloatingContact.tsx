@@ -20,9 +20,8 @@ export default function FloatingContact() {
   useEffect(() => {
     const fetchContact = async () => {
       try {
-        const response = await fetch(
-          "https://expert-demenagement-tunisie-backend.onrender.com/company/api"
-        )
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE
+        const response = await fetch(`${baseUrl}/company/api`)
 
         if (!response.ok) throw new Error("Erreur réseau")
 
