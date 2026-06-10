@@ -3,42 +3,67 @@ import RootLayoutClient from "./RootLayoutClient"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://expert-demenagement-tunisie.com"),
+  metadataBase: new URL("https://www.expert-demenagement-tunisie.com"),
+  manifest: "/site.webmanifest", // 👈 Ajout crucial pour lier ton fichier de configuration PWA
 
   title: {
-    default: "Déménagement Tunisie | Expert Déménagement Professionnel",
+    default: "Déménagement Tunisie Pas Cher | Expert Déménagement & Transport",
     template: "%s | Expert Déménagement Tunisie",
   },
 
   description:
-    "Expert en déménagement en Tunisie 🇹🇳. Service rapide, sécurisé et économique pour particuliers et entreprises. Devis gratuit.",
+    "Société de déménagement en Tunisie 🇹🇳. Devis gratuit en 24h pour particuliers et entreprises à Tunis, Ariana, Sousse, Sfax. Camions sécurisés & emballage pro.",
+  
   icons: {
-    icon: "https://expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png", // ou ton logo
-    shortcut: "https://expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
-    apple: "https://expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
+    icon: "https://www.expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
+    shortcut: "https://www.expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
+    apple: "https://www.expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
   },
+  
   keywords: [
+    // Mots-clés principaux (Génériques Tunisie)
     "déménagement Tunisie",
     "déménageur Tunisie",
+    "société de déménagement Tunisie",
+    "entreprise de déménagement Tunisie",
+    "déménagement pas cher Tunisie",
+    "prix déménagement Tunisie",
+    "devis déménagement Tunisie",
+    
+    // Mots-clés par Villes (Le plus important en Tunisie)
+    "déménagement Tunis",
+    "déménagement Ariana",
+    "déménagement Ben Arous",
+    "déménagement Sousse",
+    "déménagement Sfax",
+    "déménagement Nabeul",
+    "déménagement Hammamet",
+    "déménagement Bizerte",
+    
+    // Mots-clés spécifiques / Services
     "transport meubles Tunisie",
-    "déménagement pas cher",
-    "société déménagement Tunisie",
+    "location camion déménagement Tunisie",
+    "transport bagages Tunisie",
+    "garde meuble Tunisie",
+    "déménagement de bureau Tunisie",
+    "déménagement résidentiel Tunisie",
+    "montage meubles Tunisie"
   ],
 
   authors: [{ name: "Expert Déménagement Tunisie" }],
 
   openGraph: {
-    title: "Déménagement Tunisie | Service Professionnel",
+    title: "Déménagement Tunisie Pas Cher | Service Professionnel 🇹🇳",
     description:
-      "Entreprise spécialisée en déménagement résidentiel et commercial partout en Tunisie.",
-    url: "https://expert-demenagement-tunisie.com",
+      "Société spécialisée en déménagement résidentiel, commercial et transport de meubles partout en Tunisie. Devis gratuit sous 24h.",
+    url: "https://www.expert-demenagement-tunisie.com",
     siteName: "Expert Déménagement Tunisie",
     images: [
       {
-        url: "https://expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
+        url: "https://www.expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
         width: 1200,
         height: 630,
-        alt: "Service de déménagement en Tunisie",
+        alt: "Société de déménagement professionnel en Tunisie",
       },
     ],
     locale: "fr_FR",
@@ -47,10 +72,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Déménagement Tunisie",
-    description: "Service professionnel de déménagement en Tunisie",
+    title: "Déménagement Tunisie | Expert Déménagement",
+    description: "Service professionnel et économique de déménagement partout en Tunisie. Camions équipés et emballage soigné.",
     images: [
-      "https://expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
+      "https://www.expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
     ],
   },
 
