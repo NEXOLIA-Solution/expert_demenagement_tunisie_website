@@ -33,13 +33,13 @@ export default function ServicesPage() {
       <Navigation />
       <main>
     
-        <HeroSection/>
+        {/* <HeroSection/> */}
 
-        <ServiceAreas/>
+        {/* <ServiceAreas/> */}
 
 
 
-       <ServicesSection/>
+       {/* <ServicesSection/> */}
 
 
 
@@ -52,7 +52,7 @@ export default function ServicesPage() {
           
 
   
-        <ProcessSection />
+        {/* <ProcessSection /> */}
 
 
 
