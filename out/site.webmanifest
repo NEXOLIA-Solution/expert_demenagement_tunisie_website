@@ -1,0 +1,25 @@
+{
+  "name": "Expert Déménagement Tunisie",
+  "short_name": "Expert Déménagement",
+  "description": "Société de déménagement professionnel, fiable et abordable partout en Tunisie.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1d4ed8",
+  "orientation": "portrait",
+  "lang": "fr-FR",
+  "icons": [
+    {
+      "src": "https://www.expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://www.expert-demenagement-tunisie.com/logoSite/logo1-removebg-preview.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
